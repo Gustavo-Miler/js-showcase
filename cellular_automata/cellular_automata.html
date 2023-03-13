@@ -5,11 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="style.css">
+
     <script src="../lib/p5.js"></script>
+
     <title>Conway's Game of Life</title>
 </head>
 <body>
-    <script src="sketch.js"></script>
     <input type="button" value="Go Back" onclick="history.back()">
+    <div id="box" style="width: 100%; overflow:hidden;">
+        <div style="width:600px;float:left;">
+            <script src="sketch.js"></script>
+        </div>
+        <div style="width:620px;float:right;">
+            <p>Conway's Game of Life is a simulation of a grid of cells, where each cell is either "alive" or "dead". The game evolves over time, with each generation of cells being determined by the state of the previous generation. The rules for evolving the cells are as follows:</p>
+<ol>
+  <li>Any live cell with two or three live neighbors survives to the next generation.</li>
+  <li>Any dead cell with exactly three live neighbors becomes a live cell in the next generation.</li>
+  <li>All other live cells die in the next generation, and all other dead cells remain dead.</li>
+</ol>
+<p>By applying these simple rules, patterns can emerge and evolve over time, creating fascinating and often unpredictable behavior.</p>
+        </div>
+        
+    </div>
 </body>
 </html>

@@ -14,7 +14,8 @@ eraser_mode = false;
 let msg, eraser_state, pause_state;
 
 function setup() {
-    createCanvas(800, 600);
+    var myCanvas = createCanvas(800, 600);
+    myCanvas.parent("box");
 
     // calculate variables
     cols = floor(width / cell_size);
@@ -60,7 +61,6 @@ function draw() {
                 } else next_grid[i][j] = 0;
             }
         }
-
         grid = next_grid;
     }
     // render
