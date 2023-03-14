@@ -14,7 +14,7 @@ eraser_mode = false;
 let msg, eraser_state, pause_state;
 
 function setup() {
-    var myCanvas = createCanvas(800, 600);
+    var myCanvas = createCanvas(600, 400);
     myCanvas.parent("box");
 
     // calculate variables
@@ -65,19 +65,21 @@ function draw() {
     }
     // render
     for (let i = 0; i < cols; i++) {
+        stroke(50);
+        line(i * cell_size, 0, i * cell_size, height);
         for (let j = 0; j < rows; j++) {
+            stroke(50);
+            line(0, j * cell_size, width, j * cell_size);
             if (grid[i][j] == 1) {
                 let x = i * cell_size;
                 let y = j * cell_size;
                 
-                stroke(0);
+                noStroke();
                 fill(255);
                 rect(x, y, cell_size, cell_size)
             }
         }
     }
-
-    // show variables
 }
 
 function keyPressed() {
